@@ -547,3 +547,71 @@
   bottom: -17px;
   left: 0;
 }
+.sertificat {
+  background-color: #ffffff;
+  position: relative;
+}
+.sertificat__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 55px 271px 98px 287px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sertificat__logo {
+  width: 190px;
+  height: 100px;
+  text-align: center;
+  padding-right: 15px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-right: 20px;
+}
+.sertificat__logo:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 100px;
+  background-color: #dcdcdc;
+  right: 0;
+}
+.sertificat__title {
+  text-align: center;
+  color: #333740;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+.sertificat__dop {
+  text-align: center;
+  color: #83888f;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+}
