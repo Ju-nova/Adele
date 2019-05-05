@@ -78,25 +78,23 @@
 .page {
   position: relative;
   overflow-x: hidden;
+  width: 1500px;
   margin: 0;
   margin: 0 auto;
   padding: 0;
   color: #333740;
+  background-color: #fafcfc;
 }
 .page-header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 1170px;
   margin: 0 auto;
-  background-color: #fafcfc;
+  border-bottom: 1px solid #ebebeb;
 }
 .main-nav {
   position: relative;
   padding: 27px 31px 21px 16px;
-  width: 1170px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-bottom: 1px solid #ebebeb;
-  margin: 0 auto;
 }
 .main-nav__list {
   position: absolute;
@@ -234,12 +232,6 @@
   color: #170f1f;
 }
 .promo {
-  background-color: #fafcfc;
-  border: 1px solid transparent;
-}
-.promo__content {
-  width: 1500px;
-  margin: 0 auto;
   background-image: url(../img/promo-tins.png);
   background-repeat: no-repeat;
   -webkit-background-size: 947px 535px;
@@ -344,12 +336,11 @@
   top: 6px;
 }
 .stats {
-  background-color: #fafcfc;
   position: relative;
-  border: 1px solid transparent;
 }
 .stats__wrapper {
-  background-color: #fafcfc;
+  margin-top: 171px;
+  margin-bottom: 110px;
   background-color: #0f0816;
   background-image: -webkit-linear-gradient(130deg, #0f0816 0%, #21172b 90%, #21172b 100%);
   background-image: -o-linear-gradient(130deg, #0f0816 0%, #21172b 90%, #21172b 100%);
@@ -360,7 +351,7 @@
   z-index: 10;
   width: 404px;
   height: 525px;
-  margin-top: 50px;
+  margin-top: -121px;
   background-image: url(../img/bank.png);
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -373,7 +364,6 @@
   display: -ms-flexbox;
   display: flex;
   margin: 117px 291px 118px 473px;
-  width: 1500px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
