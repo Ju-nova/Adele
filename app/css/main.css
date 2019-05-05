@@ -78,22 +78,24 @@
 .page {
   position: relative;
   overflow-x: hidden;
-  width: 1500px;
   margin: 0;
   margin: 0 auto;
   padding: 0;
   color: #333740;
-  background-color: #fafcfc;
 }
 .page-header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 1170px;
-  margin: 0 auto;
+  min-width: 1500px;
+  background-color: #fafcfc;
   border-bottom: 1px solid #ebebeb;
 }
 .main-nav {
   position: relative;
+  width: 1170px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
   padding: 27px 31px 21px 16px;
 }
 .main-nav__list {
@@ -232,14 +234,21 @@
   color: #170f1f;
 }
 .promo {
+  min-width: 1500px;
+  margin: 0 auto;
+  background-color: #fafcfc;
+}
+.promo__wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1500px;
+  margin: 0 auto;
+  padding: 287px 891px 135px 180px;
   background-image: url(../img/promo-tins.png);
   background-repeat: no-repeat;
   -webkit-background-size: 947px 535px;
           background-size: 947px 535px;
   background-position: top 170px right 0;
-}
-.promo__wrapper {
-  padding: 287px 891px 135px 180px;
 }
 .promo__title {
   position: relative;
@@ -336,11 +345,15 @@
   top: 6px;
 }
 .stats {
-  position: relative;
+  min-width: 1500px;
+  margin: 0 auto;
+  background-color: #fafcfc;
+  border: 1px solid transparent;
 }
 .stats__wrapper {
   margin-top: 171px;
   margin-bottom: 110px;
+  position: relative;
   background-color: #0f0816;
   background-image: -webkit-linear-gradient(130deg, #0f0816 0%, #21172b 90%, #21172b 100%);
   background-image: -o-linear-gradient(130deg, #0f0816 0%, #21172b 90%, #21172b 100%);
@@ -351,7 +364,7 @@
   z-index: 10;
   width: 404px;
   height: 525px;
-  margin-top: -121px;
+  margin-top: -113px;
   background-image: url(../img/bank.png);
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -414,6 +427,10 @@
   letter-spacing: 0.4px;
   color: #a9a9a9;
 }
+.features {
+  min-width: 1500px;
+  background-color: #fafcfc;
+}
 .features__title {
   display: -webkit-box;
   display: -webkit-flex;
@@ -468,6 +485,10 @@
   letter-spacing: 0.4px;
 }
 .features__wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1500px;
+  margin: 0 auto;
   padding: 136px 249px 110px 251px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -548,10 +569,16 @@
   left: 0;
 }
 .sertificat {
+  min-width: 1500px;
   background-color: #ffffff;
   position: relative;
+  border: 1px solid transparent;
 }
 .sertificat__wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1500px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
