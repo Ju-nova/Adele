@@ -75,6 +75,24 @@
   src: local('Raleway Black'), local('Raleway-Black'), url('../fonts/raleway-v13-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/raleway-v13-latin-900.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/raleway-v13-latin-900.woff') format('woff'), /* Modern Browsers */ url('../fonts/raleway-v13-latin-900.ttf') format('truetype');
   /* Legacy iOS */
 }
+.button {
+  display: inline-block;
+  padding: 5px 39px;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
+  background-color: #18a3dd;
+}
+.button:hover {
+  opacity: 0.7;
+}
 .page {
   position: relative;
   overflow-x: hidden;
@@ -316,15 +334,6 @@
 }
 .promo__order {
   margin-right: 27px;
-  color: #f1f1f1;
-  background-color: #18a3dd;
-  padding: 5px 39px;
-  -webkit-border-radius: 30px;
-          border-radius: 30px;
-  font-weight: 700;
-}
-.promo__order:hover {
-  opacity: 0.7;
 }
 .promo__video {
   color: #333740;
@@ -639,6 +648,65 @@
   font-family: "Lato", "Arial", sans-serif;
   font-weight: 300;
   font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+}
+.order {
+  min-width: 1500px;
+  background-color: #fff;
+}
+.order__wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1500px;
+  margin: 0 auto;
+  padding: 179px 288px 173px 863px;
+  background-image: url(../../img/boxes.png);
+  background-repeat: no-repeat;
+  background-position: 0 120px;
+  -webkit-background-size: 911px 489px;
+          background-size: 911px 489px;
+}
+.order__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 13px;
+  padding-left: 27px;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: #333740;
+}
+.order__title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 40px;
+  background-color: #18a3dd;
+  left: 0;
+  top: 10px;
+}
+.order__price {
+  margin: 0;
+  margin-bottom: 35px;
+  padding-left: 27px;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #333740;
+}
+.order__description {
+  margin: 0;
+  margin-bottom: 40px;
+  color: #666666;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
   line-height: 24px;
   letter-spacing: 0.4px;
 }
