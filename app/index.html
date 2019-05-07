@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/main.min.css">
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 <body class="page">
   <header class="page-header">
@@ -97,6 +98,73 @@ Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonu</p>
   			</div>
   		</div>
   	</section>
+    
+   <section class="result">
+   	  <div class="result__title">
+  		<h2 class="result__title-left">Real Man</h2>
+  		<h2 class="result__title-right">Real Results</h2>
+  		<p class="result__title-down">Don’t forget to check these real success.</p>
+  		</div>
+  		<div class="result__wrapper">
+  			<div class="slider">
+  				<div class="slider-content">
+  					<!-- <a class="prew" href="#">&lt;</a>
+  					<a class="next" href="#">&gt;</a> -->
+  					<div class="slide">
+  						<div class="slide1">
+  						   <div class="result__text-wrapper">
+  							  <div class="result__text">
+  								<span class="result__text-number">87</span> 
+  								<span class="result__text-kg">kg</span>
+  								<span class="result__text-blue">Before</span>
+  							  </div>
+  							  <div class="result__text">
+  							  
+  								  <span class="result__text-number">63</span> 
+  								  <span class="result__text-kg">kg</span>
+  								  <span class="result__text-blue">After</span>
+                             </div>
+  					   </div>
+  					   <div class="result__name-wrapper">
+  						 <span class="result__name">
+  							Mike Andersen
+  						 </span>
+  						 <span class="result__age">Age:28</span>
+  					  </div>
+  				</div>
+  				</div>
+  				<div class="slide">
+  						<div class="slide2">
+  						   <div class="result__text-wrapper">
+  							  <div class="result__text">
+  								<span class="result__text-number">107</span> 
+  								<span class="result__text-kg">kg</span>
+  								<span class="result__text-blue">Before</span>
+  							  </div>
+  							  <div class="result__text">
+  							  
+  								  <span class="result__text-number">83</span> 
+  								  <span class="result__text-kg">kg</span>
+  								  <span class="result__text-blue">After</span>
+                             </div>
+  					   </div>
+  					   <div class="result__name-wrapper">
+  						 <span class="result__name">
+  							Pit Crowe
+  						 </span>
+  						 <span class="result__age">Age:32</span>
+  					  </div>
+  				</div>
+  				</div>
+  			</div>
+  			<div class="slider-controls">
+  				
+  				<!-- <span class="control-slide">2</span>
+  				<span class="control-slide">3</span> -->
+  			</div>
+  		</div>
+  	</div>
+   </section>
 
   	<section class="sertificat">
   	  <h3 class="sertificat__title">Certifications</h3>
@@ -218,5 +286,70 @@ Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonu</p>
     }
   });
 </script>
+
+<script>
+(function ($) {
+var SlideSpeed = 700;
+var TimeOut = 3000;
+ 
+$(document).ready(function(e) {
+	$('.slide').css(
+		{"position" : "absolute",
+		 "top":'0', "left": '0'}).hide().eq(0).show();
+	var slideNum = 0;
+	var slideTime;
+	slideCount = $(".slider-content .slide").size();
+	var animSlide = function(arrow){
+		clearTimeout(slideTime);
+		$('.slide').eq(slideNum).fadeOut(SlideSpeed);
+		if(arrow == "next"){
+			if(slideNum == (slideCount-1)){slideNum=0;}
+			else{slideNum++}
+			}
+		else if(arrow == "prew")
+		{
+			if(slideNum == 0){slideNum=slideCount-1;}
+			else{slideNum-=1}
+		}
+		else{
+			slideNum = arrow;
+			}
+		$('.slide').eq(slideNum).fadeIn(SlideSpeed, rotator);
+		$(".control-slide.active").removeClass("active");
+		$('.control-slide').eq(slideNum).addClass('active');
+		}
+var $linkArrow = $('<a class="prew" href="#">&lt;</a><a class="next" href="#">&gt;</a>')
+	.prependTo('.slider-content');		
+	$('.next').click(function(){
+		animSlide("next");
+		return false;
+		})
+	$('.prew').click(function(){
+		animSlide("prew");
+		return false;
+		})
+	var $adderSpan = '';
+	$('.slide').each(function(index) {
+			$adderSpan += '<span class = "control-slide">' + index + '</span>';
+		});
+	$('<div class ="slider-controls">' + $adderSpan +'</div>').appendTo('.slider');
+	$(".control-slide:first").addClass("active");
+	$('.control-slide').click(function(){
+	var goToNum = parseFloat($(this).text());
+	animSlide(goToNum);
+	});
+	var pause = false;
+	var rotator = function(){
+			if(!pause){slideTime = setTimeout(function(){animSlide('next')}, TimeOut);}
+			}
+	$('.slider').hover(	
+		function(){clearTimeout(slideTime); pause = true;},
+		function(){pause = false; rotator();
+		});
+	rotator();
+});
+})(jQuery);
+</script>
+
 </body>
 </html>
