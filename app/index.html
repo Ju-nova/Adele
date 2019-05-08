@@ -108,8 +108,6 @@ Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonu</p>
   		<div class="result__wrapper">
   			<div class="slider">
   				<div class="slider-content">
-  					<!-- <a class="prew" href="#">&lt;</a>
-  					<a class="next" href="#">&gt;</a> -->
   					<div class="slide">
   						<div class="slide1">
   						   <div class="result__text-wrapper">
@@ -157,14 +155,68 @@ Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonu</p>
   				</div>
   				</div>
   			</div>
-  			<div class="slider-controls">
-  				
-  				<!-- <span class="control-slide">2</span>
-  				<span class="control-slide">3</span> -->
-  			</div>
+  			
   		</div>
   	</div>
    </section>
+
+  <section class="client">
+  	  <div class="client__wrapper">
+  			<div class="client__title">
+  		       <h2 class="client__title-left">Client</h2>
+  		       <h2 class="client__title-right">Testomonials</h2>
+  		       <p class="client__title-down">We don’t just sell, we’re beloved too.</p>
+  		    </div>
+  	        
+  		    <div class="client__slider">
+  				<div class="client__slider-content">
+  					<div class="client__slide">
+  						<div class="client__slide1">
+  						   <div class="client__review">
+                               <div class="client__review-text">
+                               	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minimveniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip. sed diam nonummy nibh euismod.
+                               </div>
+                                <div class="client__review-user-wrapper">
+                                	<img src="img/ava.alena.png" width="65" height="73" alt="" class="client__review-avatar">
+                                	<div class="client__review-user">
+                                		<div class="client__review-name">
+                                			Alena Parker
+
+                                		</div>
+                                		<div class="client__review-city">
+                                			Sydney, Australia
+                                		</div>
+                                	</div>
+                                </div>    
+  		                   </div>
+  				        </div>
+  				    </div>
+  				    <div class="client__slide">
+  						<div class="client__slide2">
+  						   <div class="client__review">
+                               <div class="client__review-text">
+                               	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minimveniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip. sed diam nonummy nibh euismod.
+                               </div>
+                                <div class="client__review-user-wrapper">
+                                	<img src="img/ava.alena.png" width="65" height="73" alt="" class="client__review-avatar">
+                                	<div class="client__review-user">
+                                		<div class="client__review-name">
+                                			Elena Trofimova
+
+                                		</div>
+                                		<div class="client__review-city">
+                                			Moscow, Russia
+                                		</div>
+                                	</div>
+                                </div>    
+  		                   </div>
+  				        </div>
+  				    </div>
+  			   </div>
+  			
+  		   </div>
+  	  </div>
+  </section>
 
   	<section class="sertificat">
   	  <h3 class="sertificat__title">Certifications</h3>
@@ -270,86 +322,10 @@ Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonu</p>
   		</div>
   	</footer>
   </main>
-  <script>
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
+  
 
-  navMain.classList.remove('main-nav--no-js');
+<script src="js/index.js"></script>
 
-  navToggle.addEventListener('click', function() {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-</script>
-
-<script>
-(function ($) {
-var SlideSpeed = 700;
-var TimeOut = 3000;
- 
-$(document).ready(function(e) {
-	$('.slide').css(
-		{"position" : "absolute",
-		 "top":'0', "left": '0'}).hide().eq(0).show();
-	var slideNum = 0;
-	var slideTime;
-	slideCount = $(".slider-content .slide").size();
-	var animSlide = function(arrow){
-		clearTimeout(slideTime);
-		$('.slide').eq(slideNum).fadeOut(SlideSpeed);
-		if(arrow == "next"){
-			if(slideNum == (slideCount-1)){slideNum=0;}
-			else{slideNum++}
-			}
-		else if(arrow == "prew")
-		{
-			if(slideNum == 0){slideNum=slideCount-1;}
-			else{slideNum-=1}
-		}
-		else{
-			slideNum = arrow;
-			}
-		$('.slide').eq(slideNum).fadeIn(SlideSpeed, rotator);
-		$(".control-slide.active").removeClass("active");
-		$('.control-slide').eq(slideNum).addClass('active');
-		}
-var $linkArrow = $('<a class="prew" href="#">&lt;</a><a class="next" href="#">&gt;</a>')
-	.prependTo('.slider-content');		
-	$('.next').click(function(){
-		animSlide("next");
-		return false;
-		})
-	$('.prew').click(function(){
-		animSlide("prew");
-		return false;
-		})
-	var $adderSpan = '';
-	$('.slide').each(function(index) {
-			$adderSpan += '<span class = "control-slide">' + index + '</span>';
-		});
-	$('<div class ="slider-controls">' + $adderSpan +'</div>').appendTo('.slider');
-	$(".control-slide:first").addClass("active");
-	$('.control-slide').click(function(){
-	var goToNum = parseFloat($(this).text());
-	animSlide(goToNum);
-	});
-	var pause = false;
-	var rotator = function(){
-			if(!pause){slideTime = setTimeout(function(){animSlide('next')}, TimeOut);}
-			}
-	$('.slider').hover(	
-		function(){clearTimeout(slideTime); pause = true;},
-		function(){pause = false; rotator();
-		});
-	rotator();
-});
-})(jQuery);
-</script>
 
 </body>
 </html>
