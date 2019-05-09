@@ -132,3 +132,11 @@ $(document).ready(function(e) {
 	rotator();
 });
 })(jQuery);
+
+//открывает блоки по строчкам(блок .facts)
+
+	$(".facts__row").click(function(){
+  $(this).addClass('facts__row--active');
+  $('.facts__row').not(this).removeClass('facts__row--active');
+});
+
